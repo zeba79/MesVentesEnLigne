@@ -1,9 +1,10 @@
 <?php
 require_once './templates/header.php';
+require_once './lib/pdo.php';
+require_once './lib/tools.php';
 
+$produits = getProducts($pdo);
 ?>
-
-
 
 <div class="container">
     <h1 class="shadow-lg p-2 mb-3 mt-3 bg-body-tertiary rounded text-center">Tableau des ventes annuelles</h1>
@@ -18,13 +19,17 @@ require_once './templates/header.php';
     </tr>
   </thead>
   <tbody>
+      <?php
+foreach ($produits as $key => $produit) {?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
+
+<th scope="row"><?=$produit['id'];?></th>
+<td><?=$produit['nom'];?></td>
+<td><?=$produit['type'];?></td>
+<td><?=$produit['quantite'];?></td>
+<td><?=$produit['prix'];?> €</td>
+</tr>
+<?php }?>
   </tbody>
 </table>
 </div>

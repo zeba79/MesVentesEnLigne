@@ -2,7 +2,7 @@
 </div>
 
   <footer class="py-3 my-4 header_footer">
-        <p class="text-center">Interface de gestion produits</p>
+        <p class="text-center">Interface de gestion des ventes annuelles</p>
         <p class=" text-center text-body-secondary copyright">© 2024 - Ventes en ligne</p>
     </footer>
     <script
